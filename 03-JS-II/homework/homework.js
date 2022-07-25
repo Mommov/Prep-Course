@@ -132,8 +132,9 @@ function operadoresLogicos(num1, num2, num3) {
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
   if (num1 === 0 || num2 === 0 || num3 === 0) return 'Error';
-  if (num1 > 0 && num1 > num2 && num1 > num3) return 'Numero 1 es mayor y positivo';
   if (num1 < 0 || num2 < 0 || num3 < 0) return 'Hay negativos';
+  if (num1 > 0 && num1 > num2 && num1 > num3) return 'Número 1 es mayor y positivo';
+  
   if (num3 > num1 && num3 > num2) {
     return ++num3;
   }
@@ -191,8 +192,13 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  
-}
+  let i = 0
+  do {
+    i++;
+    numero = numero + 5;
+      } while (i < 8);
+  return numero;
+    } 
 
 
 // No modificar nada debajo de esta línea
